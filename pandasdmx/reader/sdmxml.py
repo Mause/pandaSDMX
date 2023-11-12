@@ -1186,7 +1186,7 @@ def _ms(reader, elem):
     elif trv:
         arg["values"] = trv
     else:
-        raise RuntimeError
+        arg["values"] = reader.pop_all(model.RangePeriod)
 
     if arg["values_for"] is None:
         log.warning(
